@@ -1,0 +1,141 @@
+.padding {
+    height: 80px;
+}
+
+.introduction {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin: 0 auto;
+    width: 95%;
+    padding-top: 40px;
+
+    background: #FFF1E6;
+}
+
+.redirect-links {
+    display: flex;
+    flex-direction: row;
+    column-gap: 100px;
+}
+
+.redirect-links > button {
+    font-family: 'Epilogue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 31px;
+    color: #FF7426;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+}
+
+.introduction-text {
+    padding-left: 20%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    row-gap: 14px;
+
+    background: #FFF1E6;
+}
+
+.hi-im-judy {
+    font-family: 'Epilogue';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 61px;
+    color: #081D22;
+    text-align: center;
+}
+
+.introduction-paragraph {
+    width: 80%;
+
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 29px;
+    text-align: center;
+}
+
+.portrait {
+    padding-right: 10%
+}
+
+.sections {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin: 0 auto;
+    width: 95%;
+    flex-direction: column;
+    row-gap: 14px;
+}
+
+.experience-group {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    column-gap: 14px; 
+}
+
+.experience {
+    width: 60%;
+    height: 160px;
+    background: #081D22;
+    border-radius: 40px;
+}
+
+.about, .accomplishments {
+    display: table;
+    width: 90%;
+    height: 160px;
+
+    background: #081D22;
+    border-radius: 40px;
+}
+
+.about-text, .experience-text, .accomplishments-text {
+    font-family: 'Epilogue';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    text-align: center;
+    padding-top: 50px;
+
+    color: #FFFFFF;
+}
+
+.about-descriptions, .experience-descriptions, .accomplishments-descriptions {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: #FCF6EC;
+}
+
+.work, .projects { 
+    padding-top: 60px;
+    box-sizing: border-box;
+    width: 20%;
+    height: 160px;
+    border: 3px solid #081D22;
+    border-radius: 40px;
+
+    font-family: 'Epilogue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 81%;
+    text-align: center;
+
+    color: #000000;
+}

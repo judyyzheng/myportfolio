@@ -1,38 +1,258 @@
 .App {
   text-align: center;
+  background-image: url(assets/Computer.svg);
+  width: 100%;
+  background-position: center center;
+  background-size:100% auto;
+  background-color: radial-gradient(50% 50% at 50% 50%, #763108 0%, #3A1310 100%);
 }
 
-.App-logo {
-  height: 40vmin;
+.HELLO-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 20vmin;
+  margin-top: 20%;
   pointer-events: none;
 }
 
+.HELLO-logo > img {
+  margin:0 10px 10px 0;
+}
+
+.JUDY-logo {
+  position: absolute;
+  right: 12%;
+  top: 37%;
+  height: 20vmin;
+  width: 40vmin;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Epilogue';
+  font-size: 18px;
+  line-height: 30px;
+  text-align: left;
+}
+
+.body-text {
+  position: absolute;
+  right: 9%;
+  top: 48%;
+  height: 20vmin;
+  width: 40vmin;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Epilogue';
+  font-size: 18px;
+  line-height: 30px;
+  text-align: left;
+}
+
+.screen-text { 
+  position: fixed;
+  bottom: 60%;
+  left: 43%;
+  border-right: 2px solid rgba(0, 0, 0, 0.75);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 2.1vh;
+}
+
+.visit {
+  position: absolute;
+  left: 18%;
+  top: 50%;
+  appearance: none;
+  background-clip: padding-box;
+  background-color: initial;
+  background-image: none;
+  border-style: none;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: Eina01,sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 24px;
+  margin: 0;
+  min-height: 64px;
+  outline: none;
+  overflow: visible;
+  padding: 19px 26px;
+  pointer-events: auto;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  word-break: keep-all;
+  z-index: 0;
+}
+
+@media (min-width: 768px) {
+  .visit {
+    padding: 19px 32px;
+  }
+}
+
+.visit:before,
+.visit:after {
+  border-radius: 80px;
+}
+
+.visit:before {
+  background-color: rgba(249, 58, 19, .32);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+.visit:after {
+  background-color: initial;
+  background-image: linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+  bottom: 4px;
+  content: "";
+  display: block;
+  left: 4px;
+  overflow: hidden;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  transition: all 100ms ease-out;
+  z-index: -1;
+}
+
+.visit:hover:not(:disabled):after {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition-timing-function: ease-in;
+}
+
+.visit:active:not(:disabled) {
+  color: #ccc;
+}
+
+.visit:active:not(:disabled):after {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+  bottom: 4px;
+  left: 4px;
+  right: 4px;
+  top: 4px;
+}
+
+.visit:disabled {
+  cursor: default;
+  opacity: .24;
+}
+
+/* Screen text  */
+
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 12em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(0, 0, 0, 0.75);}
+  to{border-right-color: transparent;}
+}
+
+/* Logo */ 
+
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .L-logo, .H-logo, .visit {
+    animation: HLL-logo-pulse infinite 1s linear;
+  }
+  .E-logo, .O-logo {
+    animation: Letter-logo-pulse infinite 2s linear;
+  }
+  .body-text {
+    transform: translateX(-10%);
+    opacity: 0%;
+    animation: slide-in-and-fade 2s 0.2s forwards;
+  }
+  .screen-text {
+    animation: typewriter 4s steps(44) 1s 1 normal both,
+    blinkTextCursor 500ms steps(44) infinite normal;
   }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: left;
+  margin-left: 10%;
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes HLL-logo-pulse {
+  0%{
+    transform: scale(1);
+  }
+  75%{
+    transform: scaleY(1.05);
+  }
+  100%{
+    transform: scale(1);
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+@keyframes Letter-logo-pulse {
+  0%{
+    transform: scale(1);
   }
-  to {
-    transform: rotate(360deg);
+  5%{
+    transform: scaleY(0);
+    top:20px;
   }
+  10%{
+    transform: scaleY(1);
+  }
+  75%{
+    transform: scaleY(1.05);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-in-and-fade {
+  0% {
+    opacity: 0%;
+    transform: translateX(-10%);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes blink{
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+@-moz-keyframes blink{
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+@keyframes blink{
+  0%{opacity: 0;}
+  100%{opacity: 1;}
 }
