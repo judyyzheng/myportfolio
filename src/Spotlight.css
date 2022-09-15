@@ -1,0 +1,57 @@
+.spotlight-section {
+    background-color: #F4F9ED;
+    width: device-width;
+    height: 820px;
+    overflow: hidden;
+    /* background-image: url('./assets/plane-view.png'); */
+}
+
+.spotlight-text {
+    left: 10%;
+    font-family: 'Epilogue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 61px;
+    color: rgb(0, 0, 0);
+    text-align: left;
+    padding-top: 250px;
+    padding-bottom: 30px;
+    z-index: 2;
+}
+
+.spotlight-text-description {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    color: white;
+    text-align: left;
+}
+
+.spotlight-paragraph {
+    position: relative;
+    left: 10%;
+    top: 40%;
+    
+}
+
+.spotlight-paragraph-heading {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    color: white;
+    text-align: left;
+    padding-bottom: 150px;
+}
+
+.spotlight-paragraph-body {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    color: white;
+    text-align: eft;
+    padding-bottom: 150px;
+}

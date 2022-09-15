@@ -6,6 +6,7 @@ import { BrowserRouter,
 import './index.css';
 import App from './App';
 import Home from './Home';
+import Experience from './Experience';
 import Projects from './Projects';
 import reportWebVitals from './reportWebVitals';
 
@@ -16,7 +17,7 @@ root.render(
       <Route path="/" element={<App />} />
       <Route path="/home" element={<Home />} />
       <Route path="/projects" element={<Projects />} />
-      <Route path="/experience" element={<Home />} />
+      <Route path="/experience" element={<Experience />} />
       <Route path="/university" element={<Home />} />
     </Routes>
   </BrowserRouter>

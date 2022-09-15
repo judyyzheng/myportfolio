@@ -1,0 +1,628 @@
+.experience-section {
+    display: flex;  
+    flex-direction: column;
+    /* background-color: black; */
+    padding-bottom: 100px;
+    /* background-image: url('./assets/plane-view.png'); */
+    background-image: url('./assets/gradient.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.experience-title {
+    font-family: 'Epilogue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 160px;
+    line-height: 161px;
+    color: white;
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 50px;
+}
+
+.text{
+    font-size: 160px;
+    color: transparent;
+    display: inline-block;
+    border-radius: 3px;
+    background-color: white;
+    position: relative;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.text:before{
+    content: attr(data-title);
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(127, 2, 77) 51%, rgb(255, 132, 0) 100%);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: all 1s ease-in-out;
+    animation: text-animation 3s infinite;
+}
+
+
+@keyframes text-animation {
+  0%{
+    width: 0;
+  }
+  50%{
+    width: 100%;
+  }
+  100%{
+    width: 0;
+  }
+}
+
+.experience-title-description {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    padding-bottom: 285px;
+}
+
+.sections-e {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    width: 95%;
+    flex-direction: row;
+    column-gap: 14px;
+    padding-bottom: 50px;
+}
+
+.about-e, .contact-e, .work-e, .resume-e { 
+    box-sizing: border-box;
+    height: 100px;
+    border: 3px solid white;
+    border-radius: 40px;
+
+    font-family: 'Epilogue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 81%;
+    text-align: center;
+    width: 50%;
+
+    color: white;
+    background-color: transparent;
+}
+
+.about-e:hover, .contact-e:hover, .work-e:hover, .resume-e:hover {
+    background: radial-gradient(167.23% 1546.53% at 26.85% -135.25%, #17012f 0%, #d63900 45.3%, #2b0090 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    border-radius: 40px;
+    border: 3px solid #4203246a;
+    width: 100%;
+}
+
+.cards-wrapper {
+    display: flex;  
+    flex-direction: column;
+    justify-content:center;
+    flex-wrap: wrap;
+    align-items: left;
+}
+
+.card0, .card1, .card2, .card3, .card4 {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(0, 0, 0, 0.788);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);  
+    padding: 70px;  
+    filter: drop-shadow(0 30px 10px rgba(0,0,0,0.125));
+
+    width: 36%;
+    height: 400px;
+    margin: 10px;
+
+    position: relative;
+}
+
+.title {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 12px;
+
+    color: #FCF6EC;
+    justify-content: left;
+}
+
+.description {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    
+    color: black;
+}
+
+.company {
+    position: absolute;
+    left: 70px;
+    top: 8%;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: lowercase;
+    
+    color: #FF7426;
+}
+
+.card-image {
+    margin-right: 30px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+
+.morty, .neo, .covid,.fish, .sylvan {
+    height: 380px;
+    width: auto;
+}
+
+.neo, .sylvan {
+    position: absolute;
+    left: 0;
+    width: auto;
+}
+.covid {
+    position: absolute;
+    height: 400px;
+    left: 10%;
+    transform: rotate(-20deg);
+}
+
+.fish {
+    max-height: 450px;
+    border-radius: 100%;
+}
+
+.git {
+    position: absolute;
+    max-height: 300px;
+    left: 10%;
+}
+
+.card-info {
+    position: absolute;
+    right: 3%;
+    top: 3%;
+    text-align: right;
+}
+.date-icon-description {
+    font-family: 'Epilogue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    
+    color: #8d8d8d;
+    text-transform: uppercase;
+}
+
+.skills-info {
+    position: absolute;
+    right: 50px;
+    top: 30%;
+}
+
+
+.skills-container {
+    display: grid;
+    justify-items: center;
+    grid-template-rows: repeat(1, 1fr);
+}
+
+.skills {
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 10px;
+}
+
+.skills-usage {
+    display: grid;
+    justify-items: center;
+}
+
+.skills-usage ul {
+    display: grid;
+    justify-content: center;
+    list-style: none;
+    padding: 0px;
+    width: 100%;
+}
+
+.skills-usage ul li p {
+    margin-bottom: 3px;
+    color: white;
+}
+
+
+.skills-heading p,
+.skills-usage h1 {
+    font-family: Epilogue;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.skills-paragraph {
+    width: 160px;
+}
+/* Loading Bar Component */
+
+.bar-bg {
+    background: #232E2F;
+    max-width: 300px;
+    width: 100%;
+    border-radius: 40px;
+}
+
+
+@keyframes bar-bg-inner-about-html5 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 80%;
+    }
+}
+
+.bar-bg-inner-about-html5 {
+    background: #FF7426;
+    max-width: 300px;
+    width: 80%;
+    height: 6px;
+    animation: bar-bg-inner-about-html5 4s ease-out 0s infinite;
+    border-radius: 40px;
+}
+
+@keyframes bar-bg-inner-ninety {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 90%;
+    }
+}
+
+.bar-bg-inner-about-ninety {
+    background: #FF7426;
+    max-width: 300px;
+    width: 90%;
+    height: 6px;
+    animation: bar-bg-inner-about-ninety 4s ease-out 0s infinite;
+    border-radius: 40px;
+}
+
+@keyframes bar-bg-inner-about-seventy {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 70%;
+    }
+}
+
+.bar-bg-inner-about-seventy {
+    background: #FF7426;
+    max-width: 300px;
+    width: 70%;
+    height: 6px;
+    animation: bar-bg-inner-about-seventy 4s ease-out 0s infinite;
+    border-radius: 40px;
+}
+
+@keyframes bar-bg-inner-sixty {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 60%;
+    }
+}
+
+.bar-bg-inner-about-sixty {
+    background: #FF7426;
+    max-width: 300px;
+    width: 60%;
+    height: 6px;
+    animation: bar-bg-inner-about-sixty 4s ease-out 0s infinite;
+    border-radius: 40px;
+}
+
+@keyframes bar-bg-inner-about-fifty {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 50%;
+    }
+}
+
+
+.bar-bg-inner-about-fifty {
+    background: #FF7426;
+    max-width: 300px;
+    width: 50%;
+    height: 6px;
+    animation: bar-bg-inner-about-fifty 4s ease-out 0s infinite;
+    border-radius: 40px;
+}
+
+@keyframes bar-bg-inner-forty {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 40%;
+    }
+}
+
+.bar-bg-inner-about-forty {
+    background: #FF7426;
+    max-width: 300px;
+    width: 40%;
+    height: 6px;
+    animation: bar-bg-inner-about-forty 4s ease-out 0s infinite;
+    border-radius: 40px;
+}
+
+
+.bar-bg-inner-about-css3 {
+    background: #FF7426;
+    max-width: 300px;
+    width: 90%;
+    height: 6px;
+    animation: bar-bg-inner-about-css3 4s ease-out 0s infinite;
+    border-radius: 40px;
+}
+
+@keyframes bar-bg-inner-about-css3 {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 90%;
+    }
+}
+
+.bar-bg-inner-about-stylus {
+    background: #FF7426;
+    max-width: 300px;
+    width: 80%;
+    height: 6px;
+    animation: bar-bg-inner-about-stylus 4s ease-out 0s infinite;
+    border-radius: 40px;
+}
+
+@keyframes bar-bg-inner-about-stylus {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 80%;
+    }
+}
+
+.bar-bg-inner-about-javascript {
+    background: #FF7426;
+    max-width: 300px;
+    width: 75%;
+    height: 6px;
+    animation: bar-bg-inner-about-javascript 4s ease-out 0s infinite;
+    border-radius: 40px;
+}
+
+@keyframes bar-bg-inner-about-javascript {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 75%;
+    }
+}
+
+.bar-bg-inner-about-react {
+    background: #FF7426;
+    max-width: 300px;
+    width: 100%;
+    height: 6px;
+    animation: bar-bg-inner-about-react 4s ease-out 0s infinite;
+    border-radius: 40px;
+}
+
+@keyframes bar-bg-inner-about-react {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.bar-bg-inner-about-nodejs {
+    background: #FF7426;
+    max-width: 300px;
+    width: 64%;
+    height: 6px;
+    animation: bar-bg-inner-about-nodejs 4s ease-out 0s infinite;
+    border-radius: 40px;
+}
+
+@keyframes bar-bg-inner-about-nodejs {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 64%;
+    }
+}
+
+.bar-bg-inner-about-webpack {
+    background: #FF7426;
+    max-width: 300px;
+    width: 60%;
+    height: 6px;
+    animation: bar-bg-inner-about-webpack 4s ease-out 0s infinite;
+    border-radius: 40px;
+}
+
+@keyframes bar-bg-inner-about-webpack {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 60%;
+    }
+}
+
+.bar-bg-inner-about-git {
+    background: #FF7426;
+    max-width: 300px;
+    width: 90%;
+    height: 6px;
+    animation: bar-bg-inner-about-git 4s ease-out 0s infinite;
+    border-radius: 40px;
+}
+
+@keyframes bar-bg-inner-about-git {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 90%;
+    }
+}
+
+.bar-bg-inner-about-photoshop {
+    background: #FF7426;
+    max-width: 300px;
+    width: 60%;
+    height: 6px;
+    animation: bar-bg-inner-about-photoshop 4s ease-out 0s infinite;
+    border-radius: 40px;
+}
+
+@keyframes bar-bg-inner-about-photoshop {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 60%;
+    }
+}
+
+.bar-bg-inner-about-sketch {
+    background: #FF7426;
+    max-width: 300px;
+    width: 100%;
+    height: 6px;
+    animation: bar-bg-inner-about-sketch 4s ease-out 0s infinite;
+    border-radius: 40px;
+}
+
+@keyframes bar-bg-inner-about-sketch {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.card-background {
+    position: absolute;
+    left: 0%;
+    opacity: 100%;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    padding-right: 50px;
+    padding-left: 50%;
+    margin-top: 50px;
+
+    display: flex;
+    flex-direction: row;
+    column-gap: 40px;
+
+    background-color: white;
+}
+
+.overview {
+    font-family: 'Epilogue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 57px;
+    
+    color: black;
+}
+
+.overview-description {
+    display: flex;
+    flex-direction: column;
+    row-gap: 14px;
+   padding-top: 20px;
+}
+
+.company-description {
+    display: flex;
+    flex-direction: row;
+    column-gap: 14px;
+}
+
+.company-title {
+    font-family: 'Epilogue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    
+    color: black;
+}
+
+.company-name {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    
+    color: black;
+}
+
+.overview-description {
+
+}
+
+.role-description {
+    font-family: 'Epilogue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    
+    color: black;
+}
+
+.list-description {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    
+    color: black;
+}

@@ -1,3 +1,4 @@
+import React from "react"
 import letterO from './assets/Letter-O.svg';
 import letterE from './assets/Letter-E.svg';
 import letterH from './assets/Letter-H.svg';
