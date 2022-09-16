@@ -5,8 +5,8 @@ import Portrait from './assets/Portrait.png'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper';
 
-import Haven from "./Haven";
-import Finfo from "./Finfo";
+import Haven from "./spotlight/Haven";
+import Finfo from "./spotlight/Finfo";
 
 import 'swiper/css/autoplay';
 
@@ -27,6 +27,9 @@ function Spotlight() {
             autoplay={{ delay: 10000 }}
             pagination={{ clickable: true }}
             >
+            <SwiperSlide>
+              <Finfo />
+            </SwiperSlide>
             <SwiperSlide>
               <Haven />
             </SwiperSlide>

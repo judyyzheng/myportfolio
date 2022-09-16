@@ -5,7 +5,7 @@ import Morty from './assets/morty.png';
 import Neo from './assets/neo.png';
 import Fish from './assets/art/fish.jpg';
 import Covid from './assets/covid.png';
-import GithubIcon from './assets/25231.png';
+import GithubIcon from './assets/plane-view.jpg';
 import Resume from './resume.pdf';
 import Sylvan from './assets/Sylvan.png';
 
@@ -28,7 +28,7 @@ const Experience = () => (
                 <Link to='/home' style={{ textDecoration: 'none', color: 'white'}}>about</Link>
             </button>
             <button className="work-e">
-                <Link to='/experience' style={{ textDecoration: 'none', color: 'white'}}>experience</Link>
+                <Link to='/experience' style={{ textDecoration: 'none', color: ' rgb(255, 173, 160)'}}>experience</Link>
             </button>
             <button className="resume-e">
                 <a href={Resume} target = "_blank" style={{ textDecoration: 'none', color: 'white'}}>resume</a>

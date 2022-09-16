@@ -26,7 +26,7 @@ function Home() {
             <div className="home-wrapper">
                 <div className="introduction">
                     <div className="introduction-text">
-                        <div className="hi-im-judy">Hi, I’m Judy -</div>
+                        <div className="hi-im-judy">hi, i’m judy</div>
                         <div className="redirect-links">
                             <button className="art-gallery-link">art gallery {'>'}</button>
                             <button className="ui-portfolio-link">ui portfolio {'>'}</button>
@@ -54,12 +54,12 @@ function Home() {
                         contact
                     </button>
                 </div>
-                <div style={showed ? { display: "block" } : { display: "none" }} className="blackbox">spotlight
-                    {/* <div className="blackbox-img">
+                {/* <div style={showed ? { display: "block" } : { display: "none" }} className="blackbox">spotlight
+                    <div className="blackbox-img">
                         <img src={Exclude} className="blackbox-image" alt="logo" />
-                    </div> */}
+                    </div>
                     <button onClick={(e) => setShowed(false)} className="see-projects">see projects {">"}</button>
-                </div>
+                </div> */}
                 <Spotlight />
                 <Test />
             </div>
