@@ -51,7 +51,7 @@ function Home() {
                         <a href={Resume} target = "_blank" style={{ textDecoration: 'none', color: 'black'}}>resume</a>
                     </button>
                     <button className="contact">
-                        contact
+                        <Link to='/contact' style={{ textDecoration: 'none', color: 'black'}}>contact</Link>
                     </button>
                 </div>
                 {/* <div style={showed ? { display: "block" } : { display: "none" }} className="blackbox">spotlight

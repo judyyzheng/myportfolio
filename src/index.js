@@ -9,6 +9,7 @@ import Home from './Home';
 import Experience from './Experience';
 import Projects from './Projects';
 import reportWebVitals from './reportWebVitals';
+import Contact from './Contact';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,6 +20,7 @@ root.render(
       <Route path="/projects" element={<Projects />} />
       <Route path="/experience" element={<Experience />} />
       <Route path="/university" element={<Home />} />
+      <Route path="/contact" element={<Contact />} />
     </Routes>
   </BrowserRouter>
 );

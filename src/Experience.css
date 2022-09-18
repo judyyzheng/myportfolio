@@ -614,6 +614,7 @@
 }
 
 .role-description {
+    padding-top: 20px;
     font-family: 'Epilogue';
     font-style: normal;
     font-weight: 400;
@@ -629,4 +630,8 @@
     font-size: 19px;
     
     color: black;
+}
+
+.list-description > ul > li {
+    list-style: none; 
 }
