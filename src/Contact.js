@@ -1,56 +1,70 @@
+import React from 'react';
+import emailjs from 'emailjs-com';
+import { Form, Input, TextArea, Button } from 'semantic-ui-react';
+import Swal from 'sweetalert2';
+
 import './Contact.css';
 
-function Contact() {
+const SERVICE_ID = "service_j4m103f";
+const TEMPLATE_ID = "template_g4cy2yj";
+const USER_ID = "5mg4t7Je8pA65aALF";
+
+const Contact = () => {
+  
+    const handleOnSubmit = (e) => {
+        e.preventDefault();
+        emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, e.target, USER_ID)
+          .then((result) => {
+            console.log(result.text);
+            Swal.fire({
+              icon: 'success',
+              title: 'Message Sent Successfully'
+            })
+          }, (error) => {
+            console.log(error.text);
+            Swal.fire({
+              icon: 'error',
+              title: 'Ooops, something went wrong',
+              text: error.text,
+            })
+          });
+        e.target.reset()
+      };
+
   return (
-    <div className="Design">
-        <div className="navigation">
-            <div className="project-heading">Design</div>
-        </div>
-        <div className ="project-list">
-            <div className="project">
-                <div className = "project-name">Harvest Builders Incubator</div>
-                <div className = "project-tools">
-                    <ul>
-                        <li>Typescript</li>
-                        <li>Docker</li>
-                        <li>MongoDB</li>
-                        <li>MaterialUI</li>
-                        <li>Jest</li>
-                        <li>Formic</li>
-                    </ul>
-                </div>
-                <div className = "project-description"></div>
-                <div className = "project-link"></div>
-            </div>
-            <div className="project">
-                <div className = "project-name">Covid-19 Test Optimization Program</div>
-                <div className = "project-tools">
-                    <ul>
-                        <li>Python</li>
-                    </ul>
-                </div>
-                <div className = "project-description"></div>
-            </div>
-            <div className="project">
-                <div className = "project-name">Haven Prototype: UX Laurier Designathon</div>
-                <div className = "project-tools">'                    
-                    <ul>
-                        <li>Figma</li>
-                    </ul></div>
-                <div className = "project-description"></div>
-            </div>
-            <div className="project">
-                <div className = "project-name">Sustainable fashion plug-in: IKEA Sustainability Challenge</div>
-                <div className = "project-tools">
-                <ul>
-                        <li>Figma</li>
-                    </ul>
-                </div>
-                <div className = "project-description"></div>
-            </div>
-        </div>
-     </div>
+    <div className="Contact">
+      <Form onSubmit={handleOnSubmit}>
+        <Form.Field
+          id='form-input-control-email'
+          control={Input}
+          label='Email'
+          name='user_email'
+          placeholder='Email…'
+          required
+          icon='mail'
+          iconPosition='left'
+        />
+        <Form.Field
+          id='form-input-control-last-name'
+          control={Input}
+          label='Name'
+          name='user_name'
+          placeholder='Name…'
+          required
+          icon='user circle'
+          iconPosition='left'
+        />
+        <Form.Field
+          id='form-textarea-control-opinion'
+          control={TextArea}
+          label='Message'
+          name='user_message'
+          placeholder='Message…'
+          required
+        />
+        <Button type='submit' color='green'>Submit</Button>
+      </Form>
+    </div>
   );
 }
-
 export default Contact;

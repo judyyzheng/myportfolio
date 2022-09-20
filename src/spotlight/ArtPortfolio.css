@@ -1,0 +1,35 @@
+.ArtPortfolio {
+    background-image: url('../assets/art-portfolio/Art-Portfolio.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.ArtPortfolio-project {
+    position: absolute;
+    left: 60%;
+    top: 18%;
+    z-index: 2;
+    background: linear-gradient(154.62deg, rgba(255, 247, 219, 0.24) 3.67%, rgba(255, 250, 250, 0.031) 98.21%);
+    box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(90px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 40px;
+    width: 450px;
+}
+
+.ArtPortfolio-project > ul > li {
+    list-style: none;
+    padding-right: 8px;
+}
+
+.ArtPortfolio-project > ul > li:first-of-type {
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.ArtPortfolio-project > ul > li {
+    font-family: 'Lato';
+    font-size: 15px;
+}

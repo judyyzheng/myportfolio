@@ -7,6 +7,7 @@ import { Navigation, Pagination, Autoplay } from 'swiper';
 
 import Haven from "./spotlight/Haven";
 import Finfo from "./spotlight/Finfo";
+import ArtPortfolio from "./spotlight/ArtPortfolio";
 
 import 'swiper/css/autoplay';
 
@@ -29,6 +30,9 @@ function Spotlight() {
             >
             <SwiperSlide>
               <Finfo />
+            </SwiperSlide>
+            <SwiperSlide>
+              <ArtPortfolio />
             </SwiperSlide>
             <SwiperSlide>
               <Haven />

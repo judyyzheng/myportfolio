@@ -3,8 +3,9 @@
   background-image: url(assets/Computer.svg);
   width: 100%;
   background-position: center center;
-  background-size:100% auto;
   background-color: radial-gradient(50% 50% at 50% 50%, #763108 0%, #3A1310 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .HELLO-logo {

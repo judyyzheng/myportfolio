@@ -41,7 +41,7 @@ const Experience = () => (
             <div class="card">
                 <div class="card-background">
                     <div class="overview">
-                        Overview
+                        overview {'>'}
                     </div>
                     <div class="overview-description">
                         <div class="role-description">
@@ -122,7 +122,7 @@ const Experience = () => (
             <div class="card">
                 <div class="card-background">
                     <div class="overview">
-                        Overview
+                        overview {'>'}
                     </div>
                     <div class="overview-description">
                         <div class="role-description">
@@ -145,15 +145,14 @@ const Experience = () => (
                         </div>
                     </div>
                 </div>
-                <div class="card0">
-                    
+                <div class="card0-harvest">
                     <div class="card-text">
                         <div class="title">Harvest Builders Developer Incubator Bootcamp</div>
                         <div class="company">bootcamp @ harvest builders x Neo</div>
                     </div>
-                    <div class="card-image">
+                    {/* <div class="card-image">
                         <img src={GithubIcon} className="git" alt="githubicon"/>
-                    </div>
+                    </div> */}
                     <div class="card-info">
                         <div class="date-icon"></div>
                         <div class="date-icon-description">Jan 2022 – May 2022</div>
@@ -203,7 +202,7 @@ const Experience = () => (
             <div class="card">
                 <div class="card-background">
                     <div class="overview">
-                        Overview
+                        overview {'>'}
                     </div>
                     <div class="overview-description">
                         <div class="role-description">
@@ -214,8 +213,7 @@ const Experience = () => (
                                 <li> <b>Led</b> document automation projects for several lending firms involving technical presentations and HTML/PHP development</li>
                                 <li>Collaborated with front-end team to refactor web application with an <b>intuitive and consistent UI</b> using Figma</li>
                                 <li><b>Developed</b> first standardized client file request system with PHP, cutting communication time by 30+ hours per week</li>
-                                <li><b>Cultivated strong customer relationships</b>: “We are amazed at the quality and consistency of Judy’s work” - Tyler Peters,
-Founder, MoFin Lending Corp</li>
+                                <li><b>Cultivated strong customer relationships</b></li>
                             </ul>
                         </div>
                         <div class="company-description">
@@ -268,7 +266,7 @@ Founder, MoFin Lending Corp</li>
             <div class="card">
                 <div class="card-background">
                     <div class="overview">
-                        Overview
+                        overview {'>'}
                     </div>
                     <div class="overview-description">
                         <div class="role-description">
@@ -296,9 +294,9 @@ Founder, MoFin Lending Corp</li>
                         <div class="title">Personal Art Portfolio and Business</div>
                         <div class="company">Personal Business</div>
                     </div>
-                    <div class="card-image">
+                    {/* <div class="card-image">
                         <img src={Fish} className="fish" alt="Fish"/>
-                    </div>
+                    </div> */}
                     <div class="card-info">
                         <div class="date-icon"></div>
                         <div class="date-icon-description">Aug 2020 - Present</div>
@@ -342,7 +340,7 @@ Founder, MoFin Lending Corp</li>
             <div class="card">
                 <div class="card-background">
                     <div class="overview">
-                        Overview
+                        overview {'>'}
                     </div>
                     <div class="overview-description">
                         <div class="role-description">
@@ -398,7 +396,7 @@ Founder, MoFin Lending Corp</li>
             <div class="card">
                 <div class="card-background">
                     <div class="overview">
-                        Overview
+                        overview {'>'}
                     </div>
                     <div class="overview-description">
                         <div class="role-description">

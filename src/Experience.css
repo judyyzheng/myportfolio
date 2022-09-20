@@ -123,7 +123,7 @@
     align-items: left;
 }
 
-.card0, .card1, .card2, .card3, .card4 {
+.card0, .card2, .card3, .card4 {
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     background-color: rgba(0, 0, 0, 0.788);
@@ -137,6 +137,52 @@
     margin: 10px;
 
     position: relative;
+}
+
+.card0-harvest {
+    background-image: url('./assets/city.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -5%;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);  
+    padding: 70px;  
+
+    width: 36%;
+    height: 400px;
+    margin: 10px;
+
+    position: relative; 
+}
+
+.card1 {
+    background-image: url('./assets/code.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);  
+    padding: 70px;  
+
+    width: 36%;
+    height: 400px;
+    margin: 10px;
+
+    position: relative; 
+}
+
+.card2 {
+    background-image: url('./assets/art/fish.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);  
+    padding: 70px;  
+
+    width: 36%;
+    height: 400px;
+    margin: 10px;
+
+    position: relative; 
 }
 
 .title {
@@ -181,6 +227,10 @@
 .morty, .neo, .covid,.fish, .sylvan {
     height: 380px;
     width: auto;
+}
+
+.morty {
+    height: 300px;
 }
 
 .neo, .sylvan {
@@ -435,6 +485,7 @@
     border-radius: 40px;
 }
 
+
 @keyframes bar-bg-inner-about-javascript {
     0% {
         width: 0%;
@@ -556,9 +607,8 @@
     position: absolute;
     left: 0%;
     opacity: 100%;
-    padding-top: 80px;
-    padding-bottom: 100px;
-    padding-right: 50px;
+    height: 400px;
+    padding: 30px;
     padding-left: 50%;
     margin-top: 50px;
 
@@ -566,17 +616,48 @@
     flex-direction: row;
     column-gap: 40px;
 
+    background-color: #ebe1e40e;
+    opacity: 100%;
+}
+
+.card:hover > .card-background {
     background-color: white;
 }
 
+.overview-description {
+    opacity: 0%;
+}
+
+
+.card:hover > .card-background > .overview-description {
+    animation: fade-in 0.5s ease-in forwards;
+}
+
+.card:hover > .card-background > .overview {
+    opacity: 0%;
+}
+
+@keyframes fade-in {
+    0%{
+        opacity: 80%;
+        transform: translateX(-2%);
+    }
+    100%{
+        opacity: 100%;
+        transform: translateX(0%);
+        scale: 1.01;
+    }
+  }
+
 .overview {
+    position: absolute;
+    align-self: center;
     font-family: 'Epilogue';
     font-style: normal;
     font-weight: 500;
-    font-size: 26px;
-    line-height: 57px;
+    font-size: 46px;
     
-    color: black;
+    color: white;
 }
 
 .overview-description {
@@ -604,7 +685,7 @@
     font-family: 'Lato';
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 20px;
     
     color: black;
 }
