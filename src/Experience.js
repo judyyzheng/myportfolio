@@ -3,9 +3,7 @@ import "./Experience.css"
 
 import Morty from './assets/morty.png';
 import Neo from './assets/neo.png';
-import Fish from './assets/art/fish.jpg';
 import Covid from './assets/covid.png';
-import GithubIcon from './assets/plane-view.jpg';
 import Resume from './resume.pdf';
 import Sylvan from './assets/Sylvan.png';
 
@@ -25,18 +23,19 @@ const Experience = () => (
         <div class="experience-title-description">learn more about each of my experiences and get links to my projects!</div>
         <div className="sections-e">
             <button className="about-e">
-                <Link to='/home' style={{ textDecoration: 'none', color: 'white'}}>about</Link>
+                <Link to='/home' style={{ textDecoration: 'none', color: 'rgb(152, 152, 152)'}}>about</Link>
             </button>
             <button className="work-e">
-                <Link to='/experience' style={{ textDecoration: 'none', color: ' rgb(255, 173, 160)'}}>experience</Link>
+                <Link to='/experience' style={{ textDecoration: 'none', color: 'black'}}>experience</Link>
             </button>
             <button className="resume-e">
-                <a href={Resume} target = "_blank" style={{ textDecoration: 'none', color: 'white'}}>resume</a>
+                <a href={Resume} target = "_blank" style={{ textDecoration: 'none', color: 'rgb(152, 152, 152)'}}>resume</a>
             </button>
             <button className="contact-e">
                 contact
             </button>
         </div>
+
         <div class="cards-wrapper">
             <div class="card">
                 <div class="card-background">
@@ -67,7 +66,7 @@ const Experience = () => (
                 </div>
                 <div class="card0">
                     <div class="card-text">
-                        <div class="title">Software Test Engineer Co-op</div>
+                        <div class="title">Software Engineer Co-op</div>
                         <div class="company">internship @ Neo Financial</div>
                     </div>
                     <div class="card-image">

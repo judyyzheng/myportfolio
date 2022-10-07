@@ -6,6 +6,7 @@ import Social from './Social';
 import Portrait from './assets/Portrait.png'
 
 import Resume from './resume.pdf';
+import Timeline from "./Timeline";
 
 import { useState } from "react";
 import {
@@ -28,8 +29,8 @@ function Home() {
                     <div className="introduction-text">
                         <div className="hi-im-judy">hi, i’m judy</div>
                         <div className="redirect-links">
-                            <button className="art-gallery-link">art gallery {'>'}</button>
-                            <button className="ui-portfolio-link">ui portfolio {'>'}</button>
+                            <button className="art-gallery-link"><a href='http://judyzart4.netlify.app' style={{ textDecoration: 'none', color: '#FF7426'}}>art gallery {'>'}</a></button>
+                            <button className="ui-portfolio-link"><Link to='/uiportfolio' style={{ textDecoration: 'none', color: '#FF7426'}}>ui portfolio {'>'}</ Link></button>
                         </div>
                         <div className="introduction-paragraph">currently in my third year of pursuing a double degree 
                             in Computer Science and Business Administration at the University of Waterloo. 
@@ -54,6 +55,7 @@ function Home() {
                         <Link to='/contact' style={{ textDecoration: 'none', color: 'black'}}>contact</Link>
                     </button>
                 </div>
+                <Timeline />
                 {/* <div style={showed ? { display: "block" } : { display: "none" }} className="blackbox">spotlight
                     <div className="blackbox-img">
                         <img src={Exclude} className="blackbox-image" alt="logo" />

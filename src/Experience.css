@@ -1,10 +1,10 @@
 .experience-section {
     display: flex;  
     flex-direction: column;
-    /* background-color: black; */
+    background-color: white;
     padding-bottom: 100px;
     /* background-image: url('./assets/plane-view.png'); */
-    background-image: url('./assets/gradient.gif');
+    /* background-image: url('./assets/gradient.gif'); */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -16,7 +16,7 @@
     font-weight: 400;
     font-size: 160px;
     line-height: 161px;
-    color: white;
+    color: rgb(152, 152, 152);
     text-align: center;
     padding-top: 150px;
     padding-bottom: 50px;
@@ -24,7 +24,7 @@
 
 .text{
     font-size: 160px;
-    color: transparent;
+    color: rgba(152, 152, 152, 0.16);
     display: inline-block;
     border-radius: 3px;
     background-color: white;
@@ -34,7 +34,7 @@
 }
 .text:before{
     content: attr(data-title);
-    background: linear-gradient(90deg, rgb(255, 157, 0) 0%, rgb(255, 173, 160)1%, rgb(255, 255, 255) 100%);
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0)1%, rgb(208, 208, 208) 100%);
     position: absolute;
     top: 0;
     right: 0;
@@ -65,7 +65,7 @@
     font-style: normal;
     font-weight: 400;
     font-size: 30px;
-    color: white;
+    color: rgb(152, 152, 152);
     text-align: center;
     padding-bottom: 285px;
 }
@@ -85,7 +85,7 @@
 .about-e, .contact-e, .work-e, .resume-e { 
     box-sizing: border-box;
     height: 100px;
-    border: 3px solid white;
+    border: 3px solid rgb(152, 152, 152);
     border-radius: 40px;
 
     font-family: 'Epilogue';
@@ -96,22 +96,22 @@
     text-align: center;
     width: 50%;
 
-    color: white;
+    color: rgb(152, 152, 152);
     background-color: transparent;
 }
 
 .work-e {
-    color:  rgb(255, 173, 160);
-    border: 3px solid  rgb(255, 173, 160);
+    color:  black;
+    border: 3px solid  black;
 }
 
 .about-e:hover, .contact-e:hover, .work-e:hover, .resume-e:hover {
-    background:  rgb(255, 173, 160) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    background:  black; /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     border-radius: 40px;
-    border: 3px solid  rgb(255, 173, 160);
+    border: 3px solid  black;
     width: 100%;
 }
 
@@ -126,7 +126,7 @@
 .card0, .card2, .card3, .card4 {
     backdrop-filter: blur(16px) saturate(180%);
     -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(0, 0, 0, 0.788);
+    background-color: rgba(222, 222, 222, 0.788);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.125);  
     padding: 70px;  
@@ -137,6 +137,7 @@
     margin: 10px;
 
     position: relative;
+    transform: translateX(5%);
 }
 
 .card0-harvest {
@@ -153,6 +154,7 @@
     margin: 10px;
 
     position: relative; 
+    transform: translateX(5%);
 }
 
 .card1 {
@@ -168,6 +170,7 @@
     margin: 10px;
 
     position: relative; 
+    transform: translateX(5%);
 }
 
 .card2 {
@@ -183,6 +186,7 @@
     margin: 10px;
 
     position: relative; 
+    transform: translateX(5%);
 }
 
 .title {
@@ -192,7 +196,7 @@
     font-size: 32px;
     margin-bottom: 12px;
 
-    color: #FCF6EC;
+    color: black;
     justify-content: left;
 }
 
@@ -215,7 +219,7 @@
     font-size: 18px;
     text-transform: lowercase;
     
-    color: #FF7426;
+    color: #000000;
 }
 
 .card-image {
@@ -224,36 +228,9 @@
     padding-bottom: 30px;
 }
 
-.morty, .neo, .covid,.fish, .sylvan {
-    height: 380px;
-    width: auto;
-}
-
-.morty {
+.card-image  > img{
     height: 300px;
-}
-
-.neo, .sylvan {
-    position: absolute;
-    left: 0;
     width: auto;
-}
-.covid {
-    position: absolute;
-    height: 400px;
-    left: 10%;
-    transform: rotate(-20deg);
-}
-
-.fish {
-    max-height: 450px;
-    border-radius: 100%;
-}
-
-.git {
-    position: absolute;
-    max-height: 300px;
-    left: 10%;
 }
 
 .card-info {
@@ -306,13 +283,13 @@
 
 .skills-usage ul li p {
     margin-bottom: 3px;
-    color: white;
+    color: black;
 }
 
 
 .skills-heading p,
 .skills-usage h1 {
-    font-family: Epilogue;
+    font-family: Lato;
     font-size: 2.2rem;
     font-weight: 700;
 }
@@ -608,6 +585,7 @@
     left: 0%;
     opacity: 100%;
     height: 400px;
+    width: 100%;
     padding: 30px;
     padding-left: 50%;
     margin-top: 50px;
@@ -624,8 +602,40 @@
     background-color: white;
 }
 
+.card:hover > .card0 {
+    animation: fade-forwards 0.5s ease-in forwards;
+    transform: translateX(0%);
+}
+
+.card:hover > .card0-harvest {
+    animation: fade-forwards 0.5s ease-in forwards;
+    transform: translateX(0%);
+}
+
+.card:hover > .card1 {
+    animation: fade-forwards 0.5s ease-in forwards;
+    transform: translateX(0%);
+}
+
+.card:hover > .card2 {
+    animation: fade-forwards 0.5s ease-in forwards;
+    transform: translateX(0%);
+}
+
+.card:hover > .card3 {
+    animation: fade-forwards 0.5s ease-in forwards;
+    transform: translateX(0%);
+}
+
+.card:hover > .card4 {
+    animation: fade-forwards 0.5s ease-in forwards;
+    transform: translateX(0%);
+}
+
 .overview-description {
-    opacity: 0%;
+    width: 40%;
+    opacity: 20%;
+    filter: blur(2px);
 }
 
 
@@ -637,14 +647,26 @@
     opacity: 0%;
 }
 
+@keyframes fade-forwards {
+    0%{
+        transform: translateX(5%);
+    }
+    100%{
+        transform: translateX(0%);
+        scale: 1.01;
+    }
+  }
+
 @keyframes fade-in {
     0%{
         opacity: 80%;
         transform: translateX(-2%);
+        filter: blur(2px);
     }
     100%{
         opacity: 100%;
         transform: translateX(0%);
+        filter: blur(0px);
         scale: 1.01;
     }
   }
@@ -654,10 +676,15 @@
     align-self: center;
     font-family: 'Epilogue';
     font-style: normal;
-    font-weight: 500;
-    font-size: 46px;
-    
-    color: white;
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.5);
+    margin: 0.25rem;
+
+    border-style: solid;
+    border-width: 0.8mm;
+    border-radius: 10mm;
+
+    padding: 2mm 8mm;
 }
 
 .overview-description {

@@ -1,14 +1,32 @@
-import React from "react"
-import "./Navbar.css"
-import sidebar from './assets/side-bar.png';
-import sideblob from './assets/side-blob.png';
-import judylogo from './assets/judy-zheng.svg';
+import React, { useState } from 'react';
+import * as FaIcons from 'react-icons/fa';
+import * as AiIcons from 'react-icons/ai';
+import { Link } from 'react-router-dom';
+import { SidebarData } from './SidebarData';
+import './Navbar.css';
+import { IconContext } from 'react-icons';
 
-const Navbar = ({ sticky }) => (
-  <nav className={sticky ? "navbar navbar-sticky" : "navbar"}>
-    <img src={sidebar} className="sidebar" alt="sidebar-orange"/>
-    <img src={sideblob} className="sideblob" alt="sideblob-orange"/>
-    <img src={judylogo} className="judylogo" alt="judy" />
-  </nav>
-)
-export default Navbar
+function Navbar() {
+  return (
+    <>
+      <IconContext.Provider value={{ color: '#fff' }}>
+        <nav className='nav-menu active'>
+          <ul className='nav-menu-items'>
+            {SidebarData.map((item, index) => {
+              return (
+                <li key={index} className={item.cName}>
+                  <Link to={item.path}>
+                    {item.icon}
+                    <span>{item.title}</span>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+      </IconContext.Provider>
+    </>
+  );
+}
+
+export default Navbar;

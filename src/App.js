@@ -20,7 +20,7 @@ function App() {
       })
   }, [])
 
-  const words = ["hope you're well :)", "(click the button)", "buy me a coffee?", "waffles > pancakes", "slayyyyyyyy"]
+  const words = ["welcome!", "(click the button)"]
   const [textValue, setTextValue] = useState(words);
 
   useEffect(() => {

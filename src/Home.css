@@ -66,16 +66,16 @@
     border: none;
 }
 
-.redirect-links > button:hover {
-    font-family: 'Epilogue';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 23px;
-    line-height: 31px;
-    color: #080402;
-    background-color: Transparent;
-    background-repeat:no-repeat;
-    border: none;
+.art-gallery-link:hover {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: black;
+    background-clip: text;
+}
+
+.ui-portfolio-link:hover > * {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: black;
+    background-clip: text;
 }
 
 .introduction-text {
